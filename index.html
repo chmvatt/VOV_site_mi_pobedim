@@ -115,26 +115,32 @@
       justify-content: space-around;
     }
     #history {
+      font-size: 1.1em;
       text-align: center;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
+      margin: 20px auto 40px;
+      max-width: 1300px;
+      line-height: 1.5;
     }
     #o_proekte {
+      font-size: 1.1em;
       text-align: center;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
+      margin: 20px auto 40px;
+      max-width: 1300px;
+      line-height: 1.5;
     }
     #kartina_o_proekte {
       display: block;
       margin: 0 auto;
       margin-top: 50px;
       border: solid 3px #333;
+      border-radius: 8px;
     }
     #img_history {
       display: block;
       margin: 0 auto;
       margin-top: 40px;
       border: solid 3px #333;
+      border-radius: 8px;
     }
     /* Карточки с эффектом */
     .card {
@@ -199,26 +205,6 @@
       transition: background 0.3s;
     }
     .card .info button:hover {
-      background: #e02a2a;
-    }
-    /* Стиль для крестика закрытия окон */
-    .modal-close {
-      background: #ff4444;
-      color: #fff;
-      border: none;
-      font-size: 1.5em;
-      line-height: 1;
-      padding: 5px 10px;
-      border-radius: 50%;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease, background 0.3s ease;
-      z-index: 10;
-    }
-    .modal-close:hover {
-      transform: rotate(90deg) scale(1.2);
       background: #e02a2a;
     }
     footer {
@@ -292,6 +278,26 @@
     @keyframes modalEntry {
       0% { transform: scale(0) rotateX(90deg); opacity: 0; }
       100% { transform: scale(1) rotateX(0); opacity: 1; }
+    }
+    /* Стиль для крестика закрытия окон */
+    .modal-close {
+      background: #ff4444;
+      color: #fff;
+      border: none;
+      font-size: 1.5em;
+      line-height: 1;
+      padding: 5px 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      z-index: 10;
+    }
+    .modal-close:hover {
+      transform: rotate(90deg) scale(1.2);
+      background: #e02a2a;
     }
     /* Доп. анимации для фона окон */
     .particles {
@@ -766,7 +772,7 @@
 
   <!-- О проекте -->
   <section id="intro">
-    <div class="container animate">
+    <div class="div_animate">
       <h2>О Проекте</h2>
       <p id="o_proekte">Этот сайт посвящён 80‑летию Победы в Великой Отечественной войне. Здесь собраны материалы о подвигах героев Липецкой области, ожесточённых сражениях и судьбоносных операциях, которые навсегда останутся в нашей памяти.</p>
       <img id="kartina_o_proekte" src="image/kartina_o_proekte.jpg">
@@ -775,22 +781,22 @@
 
   <!-- Герои региона-->
   <section id="heroes">
-    <div class="container animate">
+    <div class="div_animate">
       <h2>Герои Липецкой области</h2>
       <div class="content">
         <div class="card animate">
           <img src="image/Vodopyanov.jpg" alt="Герой 1">
           <div class="info">
-            <h3>Михаил Васильевич Водопьянов</h3>
-            <p style="text-align: center;">Васильевич Водопьянов (6 ноября 1899, Большие Студёнки — 11 августа 1980, Москва) — советский лётчик, участник операции по спасению экспедиции парохода «Челюскин», один из семёрки первых Героев Советского Союза. Участник арктических экспедиций. Член Союза писателей СССР. Член ЦИК СССР. Генерал-майор авиации.</p>
+            <h3>Водопьянов Михаил Васильевич</h3>
+            <p style="text-align: center;">Михаил Водопьянов (6 ноября 1899 — 11 августа 1980) — советский лётчик, участник операции по спасению экспедиции парохода «Челюскин», один из семёрки первых Героев Советского Союза. Участник арктических экспедиций. Член Союза писателей СССР. Член ЦИК СССР. Генерал-майор авиации.</p>
             <button data-modal="modal1">Подробнее</button>
           </div>
         </div>
         <div class="card animate">
           <img src="image/Ksenya_Semenovna.jpg" alt="Герой 2">
           <div class="info">
-            <h3>Ксения Семёновна Константинова</h3>
-            <p style="text-align: center;">Ксения Семёновна (18 апреля 1925 — 1 октября 1943) — Герой Советского Союза, участница Великой Отечественной войны, старшина медицинской службы.</p>
+            <h3>Константинова Ксения Семёновна</h3>
+            <p style="text-align: center;">Ксения Константинова (18 апреля 1925 — 1 октября 1943) — Герой Советского Союза, участница Великой Отечественной войны, старшина медицинской службы.</p>
             <button data-modal="modal2">Подробнее</button>
           </div>
         </div>
@@ -798,12 +804,13 @@
           <img src="image/Alekseev_Ivan.jpg" alt="Герой 3">
           <div class="info">
             <h3>Алексеев Иван Михайлович</h3>
-            <p style="text-align: center;">Алексеев Иван (8 ноября 1922 года — 5 октября 1944 года) — советский офицер, участник Великой Отечественной войны, командир стрелковой роты 1-го гвардейского стрелкового полка 2-й гвардейской стрелковой дивизии 56-й армии Северо-Кавказского фронта, Герой Советского Союза (16.05.1944), гвардии капитан.</p>
+            <p style="text-align: center;">Иван Алексеев (8 ноября 1922 — 5 октября 1944) — советский офицер, участник Великой Отечественной войны, командир стрелковой роты 1-го гвардейского стрелкового полка 2-й гвардейской стрелковой дивизии 56-й армии Северо-Кавказского фронта, Герой Советского Союза (16.05.1944), гвардии капитан.</p>
             <button data-modal="modal3">Подробнее</button>
           </div>
         </div>
       </div>
     </div>
+    <a style=text-align:center; href="https://chmvatt.github.io/VOV_site_mi_pobedim2" class="more-button">Ещё</a>
   </section>
 
   <img id="airplane" src="image/Водопьянов_самолёт1.png" alt="Самолёт">
@@ -845,18 +852,18 @@
     <div class="modal-content">
       <button class="modal-close">&times;</button>
       <h2>Алексеев Иван <br>Михайлович</h2>
-      <p>Иван Михайлович Алексеев родился 8 ноября 1922 года в селе Дмитриевское-Семенёк Ефремовского уезда Тульской губернии (ныне с. Семенёк Становлянского района Липецкой области) в крестьянской семье. Окончил неполную среднюю школу, затем Ефремовское ремесленное училище. После училища работал лаборантом на заводе синтетического каучука в городе Ефремов.
+      <p>Иван Михайлович Алексеев родился 8 ноября 1922 года в селе Дмитриевское-Семенёк Ефремовского уезда Тульской губернии (ныне с. Семенёк Становлянского района Липецкой области) в крестьянской семье. Окончил неполную среднюю школу, затем Ефремовское ремесленное училище. После училища работал лаборантом на заводе синтетического каучука в городе Ефремове.
 В Красную армию был призван 19 декабря 1941 года. В 1942 году окончил курсы младших лейтенантов и в августе того же года отправился на фронт. С 1943 года был членом ВКП.
 Гвардии старший лейтенант Алексеев, командир 6-й стрелковой роты 1-го батальона, под его командованием стремительно захватил первую линию вражеских траншей на стратегически важной высоте и в течение следующего дня успешно отразил многочисленные контратаки противника, удержав занятые позиции.
 Указом Президиума Верховного Совета СССР от 16 мая 1944 года за образцовое выполнение боевых заданий, отвагу и героизм, проявленные в борьбе с немецкими захватчиками, гвардии старшему лейтенанту Алексееву Ивану Михайловичу было присвоено звание Героя Советского Союза с вручением ордена Ленина и медали «Золотая Звезда».
-Иван Михайлович Алексеев погиб 5 октября 1944 года в боях за освобождение деревни Цитованы Шауляйского уезда Литовской ССР (по другим данным, в районе Иозефово Краснознамённой ордена Суворова дивизии.</p>
+Иван Михайлович Алексеев погиб 5 октября 1944 года в боях за освобождение деревни Цитованы Шауляйского уезда Литовской ССР (по другим данным, в районе Иозефово Краснознамённой ордена Суворова дивизии).</p>
     </div>
   </div>
 
   <!-- Сражения на территории Липецкой области -->
   <section id="battles">
-    <div class="container animate">
-      <h2>Сражения и Операции</h2>
+    <div class="div_animate">
+      <h2>Сражения и операции</h2>
       <p class="battle-description">
         Липецкая область была стратегически важной территорией, на которой проходили ожесточённые бои за оборону тыла и перевооружение сил для наступательных операций. Ниже представлены некоторые ключевые сражения:
       </p>
@@ -895,7 +902,7 @@
 
   <!-- Исторический обзор -->
   <section id="history">
-    <div class="container animate">
+    <div class="div_animate">
       <h2>Исторический обзор</h2>
       <p>Великая Отечественная война была трагическим испытанием для многих миллионов людей. Смерть и разрушения, голод и нужда вошли в повседневную жизнь. Особенно тяжело жилось на захваченных врагом территориях. Отступление Красной Армии в 1941-1942 годах порой было столь стремительным, что многие не успевали эвакуироваться. Не покидая родного дома, люди оказывались в чужом страшном мире.
       <br><br>
@@ -913,7 +920,7 @@
 
   <!-- Интересные факты -->
   <section id="facts">
-    <div class="container animate">
+    <div class="div_animate">
       <h2>Факты </h2>
       <div class="content">
         <div class="card animate">
@@ -936,7 +943,7 @@
           <img src="image/fact_3.jpg" alt="Факт 3">
           <div class="info">
             <h3>Сталинский Сокол – Николай Кузьменко</h3>
-            <p style="text-align: center;">Летом 2012 года из села Васильевка Воловского района нашли место падения сбитого самолета «МиГ-1». Были обнаружены останки летчика Николая Кузьменко...</p>
+            <p style="text-align: center;">Летом 2012 года в селе Васильевка Воловского района нашли место падения сбитого самолета «МиГ-1». Были обнаружены останки летчика Николая Кузьменко...</p>
             <button data-modal="modal6">Подробнее</button>
           </div>
         </div>
@@ -1142,7 +1149,7 @@
     });
     const audio = document.getElementById("bg-music");
       if (audio) {
-        audio.volume = 0.1; // громкость от 0.0 до 1.0
+        audio.volume = 0.1;
       }
     // Логика переключения музыки и смены иконки
     const music = document.getElementById('background-music');
@@ -1155,7 +1162,6 @@
         musicPlaying = true;
         toggleBtn.innerHTML = "❚❚";
         toggleBtn.title = "Остановить музыку";
-        toggleBtn.classList.add('playing'); // анимация пульсации
       } else {
         music.pause();
         musicPlaying = false;
@@ -1190,29 +1196,27 @@
      // Функция, выполняемая после загрузки окна
     window.addEventListener('load', function() {
       const preloader = document.querySelector('.preloader');
-      // При загрузке страницы скрываем прелоадер (добавляем класс "on")
       preloader.classList.remove('off');
       preloader.classList.add('on');
     });
 
-    // Функция для отлова клика по ссылкам
+    // Функция для "отлова" клика по ссылкам
     document.addEventListener('DOMContentLoaded', function() {
-      // Выбираем все ссылки, исключая ссылки с якорем, javascript: и специальными классами/атрибутами
       const links = document.querySelectorAll('a:not([href*="javascript"]):not([href*="#"]):not(.fancybox):not([target]):not([data-fancybox])');
 
       links.forEach(function(link) {
         link.addEventListener('click', function(e) {
-          e.preventDefault(); // отменяем стандартное поведение ссылки
+          e.preventDefault();
           const preloader = document.querySelector('.preloader');
 
-          // Отображаем прелоадер (удаляем класс "on" и добавляем "off")
+          // Отображаем прелоадер
           preloader.classList.remove('on');
           preloader.classList.add('off');
 
           // Берём адрес перехода
           const url = this.getAttribute('href');
 
-          // Через 550 мс совершаем переход на страницу
+          // Переход на страницу
           setTimeout(function() {
             window.location.href = url;
           }, 550);
